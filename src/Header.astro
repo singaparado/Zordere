@@ -1,0 +1,50 @@
+---
+const nav = [
+  { label: 'Approach', href: '/approach/' },
+  { label: 'Frameworks', href: '/frameworks/' },
+  { label: 'Legibility Score', href: '/legibility-score/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Manifesto', href: '/manifesto/' },
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-main">ZORDERE</span>
+      <span class="logo-sub">Communication Intelligence</span>
+    </a>
+    <nav class="nav-desktop">
+      {nav.map(item => (
+        <a href={item.href} class="nav-link">{item.label}</a>
+      ))}
+      <a href="mailto:hello@zordere.com" class="btn-primary nav-cta">Commission a Diagnostic</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7,27,51,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--border-thin);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+  }
+  .logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+  .logo-main { font-family: var(--display); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ivory); }
+  .logo-sub { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--aegean-light); margin-top: 4px; }
+  .nav-desktop { display: flex; align-items: center; gap: 28px; }
+  .nav-link { font-family: var(--display); font-size: 0.82rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; color: var(--ivory); transition: color 0.2s; }
+  .nav-link:hover { color: var(--aegean-light); }
+  .nav-cta { padding: 10px 18px; font-size: 0.72rem; }
+  @media (max-width: 900px) {
+    .nav-desktop { display: none; }
+  }
+</style>

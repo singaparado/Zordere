@@ -1,0 +1,31 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <span class="logo-main">ZORDERE</span>
+      <p class="footer-tag">Executive advisory and diagnostic software for organizations whose sophistication has outpaced how the market understands them.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/approach/">Approach</a>
+      <a href="/frameworks/">Frameworks</a>
+      <a href="/legibility-score/">Legibility Score</a>
+      <a href="/services/">Services</a>
+      <a href="mailto:hello@zordere.com">hello@zordere.com</a>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-copy">© {year} Zordere. Built for the ceiling, never the gutter.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer { border-top: var(--border-thin); padding: 64px 0 32px; margin-top: 80px; }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
+  .footer-tag { font-family: var(--serif-body); font-size: 0.9rem; color: var(--ivory2); max-width: 360px; margin-top: 12px; line-height: 1.6; }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; font-family: var(--mono); font-size: 0.78rem; }
+  .footer-links a { text-decoration: none; color: var(--ivory2); }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+</style>
