@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Zordere — Strategic Positioning, Messaging & Go-to-Market"
+  description="Zordere helps companies strengthen positioning, messaging, and go-to-market communication for complex products, technologies, and organizations."
+  path="/"
+>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Executive Advisory &amp; Communication Intelligence</p>
+      <h1>Your product outgrew how the market understands it.</h1>
+      <p class="hero-sub">Zordere diagnoses and rebuilds the language layer between what sophisticated organizations have built and what buyers, investors, and partners actually understand.</p>
+      <div class="hero-ctas">
+        <a href="/legibility-score/" class="btn-primary">Run the Legibility Score →</a>
+        <a href="/approach/" class="btn-secondary">See the Method</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="entry-grid">
+    <div class="container grid">
+      <a href="/frameworks/" class="entry-card">
+        <span class="eyebrow">The IP</span>
+        <h3>Frameworks</h3>
+        <p>The Complexity Tax, the Interpretation Window, RAFU, and the Three Laws of Translation — the proprietary vocabulary behind every diagnosis.</p>
+      </a>
+      <a href="/legibility-score/" class="entry-card">
+        <span class="eyebrow">Free Diagnostic</span>
+        <h3>Legibility Score</h3>
+        <p>Paste your hero copy. Get a 0–100 score and see exactly where your narrative fractures.</p>
+      </a>
+      <a href="/services/" class="entry-card">
+        <span class="eyebrow">Engagements</span>
+        <h3>Services</h3>
+        <p>From a single audit to an ongoing narrative retainer — structured for how sophisticated organizations actually buy.</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { padding: 120px 0 80px; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 20px 0 24px; max-width: 780px; }
+  .hero-sub { font-family: var(--serif-body); font-size: 1.15rem; line-height: 1.7; color: var(--ivory2); max-width: 620px; margin-bottom: 36px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .entry-card { display: block; text-decoration: none; padding: 32px; border: var(--border-thin); border-radius: var(--radius); background: var(--surface); transition: border-color 0.2s; }
+  .entry-card:hover { border-color: var(--gold); }
+  .entry-card h3 { font-size: 1.3rem; margin: 10px 0 12px; }
+  .entry-card p { font-family: var(--serif-body); font-size: 0.92rem; line-height: 1.6; color: var(--ivory2); margin: 0; }
+
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
