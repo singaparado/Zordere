@@ -1,0 +1,275 @@
+---
+// Pure decorative background layer for hero sections.
+// Ported from the original SPA's "Hero Aurora Australis" effect.
+// Usage: drop <HeroSky /> as the FIRST child inside any section with
+// position: relative + overflow: hidden. It paints behind everything
+// via z-index; your real content should sit in an element with
+// position: relative so it stacks above these layers automatically.
+---
+<div class="hero-sky" aria-hidden="true">
+  <div class="hero-bg"></div>
+  <div class="hero-nebula"></div>
+  <div class="hero-aurora-left"></div>
+  <div class="hero-aurora-right"></div>
+  <div class="hero-aurora-bottom"></div>
+  <div class="hero-stars"></div>
+  <div class="hero-stars-2"></div>
+  <div class="hero-veil"></div>
+</div>
+
+<style>
+  .hero-sky {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  /* ── BASE SKY ─────────────────────────────────────── */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(
+      180deg,
+      #010509 0%,
+      #020B18 40%,
+      #040E1F 70%,
+      #061526 100%
+    );
+  }
+
+  /* ── AURORA RIBBON 1: Left sweep (teal-cyan-white) ── */
+  .hero-aurora-left {
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    left: -30%;
+    width: 80%;
+    height: 130%;
+    background:
+      radial-gradient(ellipse 12% 80% at 28% 45%,
+        rgba(255,255,255,0.55) 0%,
+        rgba(180,255,240,0.45) 20%,
+        rgba(40,220,180,0.35) 45%,
+        transparent 68%
+      ),
+      radial-gradient(ellipse 35% 90% at 22% 50%,
+        rgba(30,200,160,0.40) 0%,
+        rgba(20,160,220,0.28) 40%,
+        transparent 70%
+      ),
+      radial-gradient(ellipse 55% 100% at 15% 55%,
+        rgba(60,180,220,0.22) 0%,
+        transparent 65%
+      );
+    filter: blur(12px);
+    opacity: 0.9;
+    animation: aurora-left 22s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+    transform-origin: center bottom;
+  }
+
+  @keyframes aurora-left {
+    0%   { transform: rotate(-8deg) translateX(-5%) translateY(3%) scaleY(0.88); opacity: 0.75; filter: blur(14px) saturate(130%); }
+    30%  { transform: rotate(-4deg) translateX(5%) translateY(-4%) scaleY(1.08); opacity: 1; filter: blur(10px) saturate(180%); }
+    70%  { transform: rotate(-10deg) translateX(-3%) translateY(2%) scaleY(0.94); opacity: 0.88; filter: blur(12px) saturate(150%); }
+    100% { transform: rotate(-6deg) translateX(7%) translateY(-6%) scaleY(1.12); opacity: 0.95; filter: blur(11px) saturate(170%); }
+  }
+
+  /* ── AURORA RIBBON 2: Right sweep (gold-green-white) ── */
+  .hero-aurora-right {
+    position: absolute;
+    z-index: 1;
+    top: -15%;
+    right: -35%;
+    width: 85%;
+    height: 120%;
+    background:
+      radial-gradient(ellipse 10% 75% at 72% 40%,
+        rgba(255,255,255,0.50) 0%,
+        rgba(255,255,200,0.40) 18%,
+        rgba(180,220,80,0.32) 42%,
+        transparent 65%
+      ),
+      radial-gradient(ellipse 32% 85% at 78% 45%,
+        rgba(200,180,60,0.38) 0%,
+        rgba(140,200,100,0.28) 38%,
+        transparent 68%
+      ),
+      radial-gradient(ellipse 52% 100% at 85% 50%,
+        rgba(80,200,140,0.20) 0%,
+        transparent 62%
+      );
+    filter: blur(11px);
+    opacity: 0.88;
+    animation: aurora-right 26s ease-in-out infinite alternate;
+    animation-delay: -10s;
+    will-change: transform, opacity;
+    transform-origin: center bottom;
+  }
+
+  @keyframes aurora-right {
+    0%   { transform: rotate(6deg) translateX(4%) translateY(2%) scaleY(1.04); opacity: 0.82; filter: blur(13px) saturate(120%); }
+    35%  { transform: rotate(2deg) translateX(-6%) translateY(-5%) scaleY(0.90); opacity: 1; filter: blur(9px) saturate(175%); }
+    75%  { transform: rotate(8deg) translateX(5%) translateY(4%) scaleY(1.10); opacity: 0.86; filter: blur(12px) saturate(145%); }
+    100% { transform: rotate(4deg) translateX(-4%) translateY(-3%) scaleY(0.96); opacity: 0.92; filter: blur(10px) saturate(160%); }
+  }
+
+  /* ── AURORA HORIZON: bright band where aurora meets sky ── */
+  .hero-aurora-bottom {
+    position: absolute;
+    z-index: 2;
+    bottom: -5%;
+    left: -5%;
+    right: -5%;
+    height: 50%;
+    background:
+      radial-gradient(ellipse 22% 60% at 10% 100%, rgba(40,220,160,0.55) 0%, transparent 58%),
+      radial-gradient(ellipse 18% 50% at 28% 100%, rgba(255,255,255,0.30) 0%, rgba(60,220,180,0.40) 25%, transparent 55%),
+      radial-gradient(ellipse 22% 65% at 50% 100%, rgba(80,210,140,0.48) 0%, transparent 60%),
+      radial-gradient(ellipse 18% 55% at 72% 100%, rgba(255,255,255,0.28) 0%, rgba(180,220,80,0.35) 22%, transparent 55%),
+      radial-gradient(ellipse 20% 60% at 90% 100%, rgba(200,170,60,0.42) 0%, transparent 58%);
+    filter: blur(16px);
+    opacity: 0.95;
+    animation: aurora-bottom 14s ease-in-out infinite alternate;
+    animation-delay: -5s;
+    will-change: transform;
+  }
+
+  @keyframes aurora-bottom {
+    0%   { transform: scaleX(0.90) translateX(-3%); opacity: 0.88; }
+    50%  { transform: scaleX(1.08) translateX(4%); opacity: 1; }
+    100% { transform: scaleX(0.94) translateX(-2%); opacity: 0.92; }
+  }
+
+  /* ── NEBULA LAYER ─────────────────────────────────── */
+  .hero-nebula {
+    position: absolute;
+    z-index: 1;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background:
+      radial-gradient(ellipse 55% 45% at 75% 20%,
+        rgba(100,50,160,0.38) 0%,
+        rgba(60,30,110,0.25) 40%,
+        transparent 70%
+      ),
+      radial-gradient(ellipse 45% 40% at 20% 30%,
+        rgba(30,80,140,0.30) 0%,
+        rgba(20,50,100,0.18) 50%,
+        transparent 70%
+      ),
+      radial-gradient(ellipse 35% 30% at 50% 75%,
+        rgba(60,20,100,0.22) 0%,
+        transparent 60%
+      );
+    filter: blur(40px);
+    opacity: 0.85;
+    animation: nebula-shift 35s ease-in-out infinite alternate;
+  }
+
+  @keyframes nebula-shift {
+    0%   { transform: scale(1) translate(0, 0); opacity: 0.75; }
+    50%  { transform: scale(1.08) translate(2%, -3%); opacity: 0.95; }
+    100% { transform: scale(0.96) translate(-2%, 2%); opacity: 0.80; }
+  }
+
+  /* ── STAR FIELD 1 ─────────────────────────────────── */
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.92) 1px, transparent 1.5px),
+      radial-gradient(circle, rgba(255,255,255,0.70) 0.8px, transparent 1.2px),
+      radial-gradient(circle, rgba(220,240,255,0.85) 0.9px, transparent 1.4px),
+      radial-gradient(circle, rgba(255,255,255,0.60) 0.7px, transparent 1.1px),
+      radial-gradient(circle, rgba(255,255,255,0.80) 1px, transparent 1.5px),
+      radial-gradient(circle, rgba(200,230,255,0.75) 0.8px, transparent 1.3px);
+    background-size:
+      88px 92px, 140px 148px, 72px 96px, 200px 180px, 160px 120px, 240px 200px;
+    background-position:
+      12px 18px, 55px 42px, 30px 75px, 110px 25px, 80px 110px, 190px 60px;
+    opacity: 0.55;
+    mix-blend-mode: screen;
+    animation: stars-drift 45s linear infinite;
+  }
+
+  /* ── STAR FIELD 2 (depth) ─────────────────────────── */
+  .hero-stars-2 {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.45) 1.5px, transparent 2px),
+      radial-gradient(circle, rgba(180,220,255,0.35) 1.2px, transparent 1.8px),
+      radial-gradient(circle, rgba(255,255,255,0.30) 1px, transparent 1.6px);
+    background-size: 260px 240px, 310px 280px, 180px 200px;
+    background-position: 40px 30px, 150px 85px, 220px 140px;
+    opacity: 0.35;
+    mix-blend-mode: screen;
+    animation: stars-drift 65s linear infinite reverse;
+  }
+
+  @keyframes stars-drift {
+    0%   { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+  }
+
+  /* ── CENTER VEIL — clears text area for legibility ── */
+  .hero-veil {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    background: radial-gradient(
+      ellipse 55% 60% at 50% 48%,
+      rgba(1, 8, 22, 0.72) 0%,
+      rgba(1, 8, 22, 0.45) 40%,
+      rgba(1, 8, 22, 0.15) 65%,
+      transparent 80%
+    );
+  }
+
+  @media (min-width: 900px) {
+    .hero-veil {
+      background: radial-gradient(
+        ellipse 45% 75% at 30% 50%,
+        rgba(1, 8, 22, 0.78) 0%,
+        rgba(1, 8, 22, 0.50) 40%,
+        rgba(1, 8, 22, 0.18) 65%,
+        transparent 80%
+      );
+    }
+    .hero-aurora-right {
+      width: 70%;
+      right: -15%;
+      opacity: 1.1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-aurora-left { width: 85%; left: -30%; filter: blur(30px); }
+    .hero-aurora-right { width: 75%; right: -30%; filter: blur(35px); }
+    .hero-stars { opacity: 0.72; }
+    .hero-veil {
+      background: radial-gradient(
+        ellipse 55% 50% at 50% 42%,
+        rgba(1, 8, 22, 0.70) 0%,
+        rgba(1, 8, 22, 0.38) 45%,
+        rgba(1, 8, 22, 0.08) 68%,
+        transparent 82%
+      );
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-aurora-left, .hero-aurora-right, .hero-aurora-bottom,
+    .hero-nebula, .hero-stars, .hero-stars-2 {
+      animation: none;
+    }
+  }
+</style>
