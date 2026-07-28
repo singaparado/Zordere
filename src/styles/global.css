@@ -1,31 +1,31 @@
 :root {
-  /* ── Base Surfaces — Oxford Blue foundation ───────────── */
-  --navy:         #071B33;
-  --cobalt:       #071B33;
-  --deep:         #00152E;
-  --void:         #0B223F;
-  --ink:          #102B4A;
-  --surface:      #0A1F38;
+  /* ── Base Surfaces — Charcoal-Teal foundation (LOCKED: v2 palette study, Version B) ── */
+  --navy:         #0F1B1C;
+  --cobalt:       #0F1B1C;
+  --deep:         #0A1414;
+  --void:         #16241F;
+  --ink:          #17302B;
+  --surface:      #14211F;
 
-  /* ── Cream / Ivory Paper System ──────────────────────── */
-  --ivory:        #F7F1E3;
-  --ivory2:       #D8CCB8;
-  --cream:        #EDE2CC;
-  --paper:        #FFF8EA;
-  --muted:        #8D877D;
+  /* ── Bone / Cool Paper System ─────────────────────────── */
+  --ivory:        #F4F0E6;
+  --ivory2:       #CFC7B4;
+  --cream:        #E4DDC9;
+  --paper:        #F6F2E8;
+  --muted:        #8D8A7F;
 
-  /* ── Antique Gold Ornament ───────────────────────────── */
-  --gold:         #C8A45D;
-  --gold-light:   #E2C98C;
-  --gold-dim:     #5A4826;
-  --gold-glow:    rgba(200,164,93,0.12);
+  /* ── Aged Bronze Ornament (was Antique Gold) ─────────── */
+  --gold:         #9C7A45;
+  --gold-light:   #C2A06B;
+  --gold-dim:     #6B5330;
+  --gold-glow:    rgba(156,122,69,0.12);
 
-  /* ── Structural Blue Accent ──────────────────────────── */
-  --aegean:       #274C77;
-  --aegean-light: #416B9A;
-  --sand:         #24364B;
+  /* ── Structural Teal Accent (was Structural Blue) ────── */
+  --aegean:       #1A3733;
+  --aegean-light: #2E5A53;
+  --sand:         #23302B;
 
-  /* ── Utility ─────────────────────────────────────────── */
+  /* ── Utility — unchanged, semantic not brand ─────────── */
   --rust:         #B8643E;
 
   --display:      'Newsreader', serif;
