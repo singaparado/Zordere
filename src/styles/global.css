@@ -1,5 +1,5 @@
 :root {
-  /* ── Palette B — Charcoal-Teal Foundation ── */
+  /* ── Palette B — Charcoal-Teal & Deep Tones ── */
   --bg-base:       #0F1B1C;
   --bg-base-deep:  #0A1414;
   --bg-claim-a:    #7BA396;
@@ -11,13 +11,13 @@
   --bg-deep2-a:    #1A3733;
   --bg-deep2-b:    #142E2B;
 
-  /* ── Bronze / Gold (Buttons & Interactive Accents) ── */
+  /* ── Bronze / Gold (Restored for Buttons & Accents) ── */
   --gold:          #9C7A45;
   --gold-light:    #C2A06B;
   --gold-dim:      #6B5330;
   --gold-glow:     rgba(156,122,69,0.16);
 
-  /* ── Silver (Section Backgrounds & Neutral Counterweights) ── */
+  /* ── Silver (Restored for Section Backdrops & Neutrals) ── */
   --silver:        #A9B0AC;
   --silver-light:  #CBD1CD;
   --silver-dim:    #6E7570;
@@ -82,6 +82,7 @@ a { color: inherit; }
   color: var(--gold);
 }
 
+/* Restored Bronze/Gold Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
