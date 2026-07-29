@@ -7,12 +7,12 @@ import HeroSky from '../components/HeroSky.astro';
   description="Zordere helps companies strengthen positioning, messaging, and go-to-market communication for complex products, technologies, and organizations."
   path="/"
 >
-  <section class="hero">
+  <section class="hero tone-base">
     <HeroSky />
     <div class="container">
       <p class="eyebrow">Executive Advisory &amp; Communication Intelligence</p>
-      <h1>Your product outgrew how the market understands it.</h1>
-      <p class="hero-sub">Zordere diagnoses and rebuilds the language layer between what sophisticated organizations have built and what buyers, investors, and partners actually understand.</p>
+      <h1>Sophistication isn't the risk. <em>Being misread is.</em></h1>
+      <p class="hero-sub">Zordere diagnoses the distance between what an organization has built and what its market has understood — and closes it with evidence, not opinion.</p>
       <div class="hero-ctas">
         <a href="/legibility-score/" class="btn-primary">Run the Legibility Score →</a>
         <a href="/approach/" class="btn-secondary">See the Method</a>
@@ -20,7 +20,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="entry-grid">
+  <section class="entry-grid-section">
     <div class="container grid">
       <a href="/frameworks/" class="entry-card">
         <span class="eyebrow">The IP</span>
@@ -110,7 +110,7 @@ import HeroSky from '../components/HeroSky.astro';
         <div class="method-item"><span class="method-num">II.</span><h3>Reconstruct</h3><p>Rebuild the positioning and language architecture from evidence, calibrated to how the specific buyer actually decides.</p></div>
         <div class="method-item"><span class="method-num">III.</span><h3>Calibrate</h3><p>Hold the new narrative consistent across every touchpoint as the product, market, and category continue to move.</p></div>
       </div>
-      <a href="/approach/" class="fw-more">Read the full method →</a>
+      <a href="/approach/" class="fw-more" style="display:inline-block; margin-top:32px;">Read the full method →</a>
     </div>
   </section>
 
@@ -128,10 +128,12 @@ import HeroSky from '../components/HeroSky.astro';
 <style>
   .hero { position: relative; overflow: hidden; padding: 120px 0 80px; isolation: isolate; }
   .hero .container { position: relative; z-index: 10; }
-  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 20px 0 24px; max-width: 780px; }
-  .hero-sub { font-family: var(--serif-body); font-size: 1.15rem; line-height: 1.7; color: var(--ivory2); max-width: 620px; margin-bottom: 36px; }
+  .hero h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.22; letter-spacing: -0.01em; margin: 0 0 28px; max-width: 800px; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); font-weight: 500; }
+  .hero-sub { font-family: var(--serif-body); font-size: 1.08rem; line-height: 1.8; color: var(--ivory2); max-width: 560px; margin-bottom: 36px; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
+  .entry-grid-section { padding: 40px 0 96px; }
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .entry-card { display: block; text-decoration: none; padding: 32px; border: var(--border-thin); border-radius: var(--radius); background: var(--surface); transition: border-color 0.2s; }
   .entry-card:hover { border-color: var(--gold-light); }
@@ -142,73 +144,69 @@ import HeroSky from '../components/HeroSky.astro';
     .grid { grid-template-columns: 1fr; }
   }
 
-  /* ── Claim (Using Teal Palette Gradient instead of Silver) ── */
+  /* ── Claim (Using Teal Palette Gradient) ── */
   .claim {
     background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-light) 100%);
-    color: var(--void);
+    color: var(--deep);
     padding: 100px 0;
   }
-  .container-wide { max-width: 1160px; }
-  .eyebrow-dark { color: var(--void) !important; opacity: 0.75; }
+  .eyebrow-dark { color: var(--deep) !important; opacity: 0.75; }
   .claim h2 {
-    font-family: var(--display); font-weight: 600; font-style: italic;
-    font-size: clamp(2.2rem, 6.4vw, 4.6rem); line-height: 1.04;
-    letter-spacing: -0.01em; margin: 0 0 30px; max-width: 900px; color: var(--void);
+    font-family: var(--display); font-weight: 500; font-style: italic;
+    font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 1.02;
+    letter-spacing: -0.015em; margin: 0 0 34px; max-width: 920px; color: var(--deep);
   }
-  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(18,32,31,0.85); max-width: 460px; }
+  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(18,32,31,0.85); max-width: 480px; letter-spacing: 0.02em; }
 
-  /* ── Proof / Dossier (Teal Surface Context with Minor Silver Accents) ── */
+  /* ── Proof / Dossier ── */
   .proof { background: var(--void); color: var(--ivory); padding: 100px 0; border-top: var(--border-thin); border-bottom: var(--border-thin); }
   .dossier-wrap { display: flex; justify-content: center; }
   .dossier {
-    background: var(--surface); color: var(--ivory); width: 100%; max-width: 620px;
+    background: var(--paper); color: var(--deep); width: 100%; max-width: 620px;
     padding: 40px 40px 32px; border-radius: 3px; transform: rotate(-0.35deg);
     box-shadow: 0 30px 70px -20px rgba(0,0,0,0.5), 0 2px 0 rgba(255,255,255,0.05);
     position: relative;
-    border: 1px solid rgba(194,160,107,0.25);
   }
-  .dossier::before { content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border: 1px solid rgba(244,240,230,0.12); pointer-events: none; }
-  .dossier-head { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(244,240,230,0.6); padding-bottom: 18px; border-bottom: 1px solid rgba(244,240,230,0.12); margin-bottom: 26px; }
-  .dossier-head .title { color: var(--gold-light); font-weight: 500; font-size: 0.7rem; }
-  .dossier-illustrative { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-glow); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 20px; }
-  .dossier-input { font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: rgba(244,240,230,0.85); padding: 16px 18px; background: rgba(0,0,0,0.25); border-left: 2px solid var(--gold); margin-bottom: 30px; }
+  .dossier::before { content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border: 1px solid rgba(0,0,0,0.12); pointer-events: none; }
+  .dossier-head { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; padding-bottom: 18px; border-bottom: 1px solid rgba(0,0,0,0.12); margin-bottom: 26px; }
+  .dossier-head .title { color: var(--gold-dim); font-weight: 500; font-size: 0.7rem; opacity: 1; }
+  .dossier-illustrative { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); background: var(--gold-glow); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 20px; }
+  .dossier-input { font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.5; opacity: 0.78; padding: 16px 18px; background: rgba(0,0,0,0.035); border-left: 2px solid var(--gold); margin-bottom: 30px; }
   .score-row { display: flex; align-items: baseline; gap: 18px; margin-bottom: 6px; }
-  .score-num { font-family: var(--display); font-weight: 600; font-size: 4.4rem; line-height: 1; color: var(--ivory); font-variant-numeric: tabular-nums; }
-  .score-of { font-family: var(--mono); font-size: 0.9rem; color: rgba(244,240,230,0.5); }
+  .score-num { font-family: var(--display); font-weight: 500; font-size: 4.4rem; line-height: 1; color: var(--deep); font-variant-numeric: tabular-nums; }
+  .score-of { font-family: var(--mono); font-size: 0.9rem; opacity: 0.42; }
   .score-verdict { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rust); margin-bottom: 28px; }
   .law-bars { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
   .law-bar-row { display: grid; grid-template-columns: 108px 1fr 34px; align-items: center; gap: 12px; }
-  .law-bar-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(244,240,230,0.7); }
-  .law-bar-track { height: 5px; background: rgba(244,240,230,0.15); border-radius: 3px; overflow: hidden; }
-  .law-bar-fill { height: 100%; background: var(--gold); border-radius: 3px; }
+  .law-bar-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.6; }
+  .law-bar-track { height: 5px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden; }
+  .law-bar-fill { height: 100%; background: var(--gold-dim); border-radius: 3px; }
   .law-bar-fill.fail { background: var(--rust); }
-  .law-bar-val { font-family: var(--mono); font-size: 0.72rem; text-align: right; color: rgba(244,240,230,0.65); }
-  .fractures { border-top: 1px solid rgba(244,240,230,0.12); padding-top: 22px; }
-  .fractures-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,240,230,0.55); margin-bottom: 12px; }
-  .fracture-item { display: flex; gap: 10px; font-size: 0.86rem; line-height: 1.55; color: rgba(244,240,230,0.85); margin-bottom: 10px; }
-  .fracture-item .fnum { font-family: var(--mono); color: var(--gold); flex-shrink: 0; }
-  
-  /* Minor Silver Adjustment Applied Here */
-  .dossier-seal { position: absolute; bottom: 30px; right: 36px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--silver); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 1rem; color: var(--silver-light); }
+  .law-bar-val { font-family: var(--mono); font-size: 0.72rem; text-align: right; opacity: 0.55; }
+  .fractures { border-top: 1px solid rgba(0,0,0,0.12); padding-top: 22px; }
+  .fractures-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.45; margin-bottom: 12px; }
+  .fracture-item { display: flex; gap: 10px; font-size: 0.86rem; line-height: 1.55; opacity: 0.8; margin-bottom: 10px; }
+  .fracture-item .fnum { font-family: var(--mono); color: var(--gold-dim); flex-shrink: 0; }
+  .dossier-seal { position: absolute; bottom: 30px; right: 36px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--gold-dim); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 1rem; color: var(--gold-dim); opacity: 0.8; }
   .proof-cta { text-align: center; margin-top: 44px; }
 
   /* ── Framework index ──────────────────────────────────── */
   .fw-index { padding: 100px 0; }
-  .fw-index-h { font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin: 0 0 40px; max-width: 640px; }
-  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(194,160,107,0.15); border: 1px solid rgba(194,160,107,0.15); }
+  .fw-index-h { font-family: var(--display); font-weight: 500; font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin: 0 0 40px; max-width: 640px; }
+  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(244,240,230,0.09); border: 1px solid rgba(244,240,230,0.09); }
   .fw-card { background: var(--navy); padding: 32px 28px; }
   .fw-card .fw-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold-light); letter-spacing: 0.06em; margin-bottom: 16px; display: block; }
   .fw-card h3 { font-family: var(--display); font-size: 1.15rem; font-weight: 500; margin: 0 0 10px; }
   .fw-card p { font-family: var(--serif-body); font-size: 0.84rem; line-height: 1.65; color: var(--ivory2); margin: 0; }
-  .fw-more { display: inline-block; margin-top: 32px; font-family: var(--font-nav); font-size: 0.85rem; color: var(--aegean-light); text-decoration: none; }
+  .fw-more { display: inline-block; margin-top: 32px; font-family: var(--mono); font-size: 0.85rem; color: var(--aegean-light); text-decoration: none; }
   .fw-more:hover { color: var(--gold-light); }
 
   /* ── Quote break ──────────────────────────────────────── */
-  .quote-break { background: var(--sand); padding: 110px 0; text-align: center; }
+  .quote-break { background: #1B1C1E; padding: 110px 0; text-align: center; }
   .quote-break .container { max-width: 760px; }
-  .quote-mark { font-family: var(--display); font-size: 3rem; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+  .quote-mark { font-family: var(--display); font-size: 3rem; color: var(--gold-dim); line-height: 1; margin-bottom: 8px; }
   .quote-break blockquote { margin: 0 0 26px; font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; color: var(--ivory); }
-  .quote-attr { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-light); }
+  .quote-attr { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
 
   /* ── Method ───────────────────────────────────────────── */
   .method { padding: 110px 0; background: linear-gradient(160deg, var(--surface), var(--deep)); }
