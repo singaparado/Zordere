@@ -14,26 +14,32 @@
   --paper:        #F6F2E8;
   --muted:        #8D8A7F;
 
-  /* ── Aged Bronze Ornament (was Antique Gold) ─────────── */
-  --gold:         #9C7A45;
-  --gold-light:   #C2A06B;
+  /* ── Aged Bronze Ornament (was Antique Gold) — brightened for legibility ── */
+  --gold:         #B08A4E;
+  --gold-light:   #D9B679;
   --gold-dim:     #6B5330;
-  --gold-glow:    rgba(156,122,69,0.12);
+  --gold-glow:    rgba(176,138,78,0.14);
 
-  /* ── Structural Teal Accent (was Structural Blue) ────── */
-  --aegean:       #1A3733;
-  --aegean-light: #2E5A53;
+  /* ── Structural Teal Accent — brightened, now actually reads as an accent ── */
+  --aegean:       #2E6B60;
+  --aegean-light: #5FA898;
   --sand:         #23302B;
+
+  /* ── Silver — third instrument metal, cool neutral counterweight to bronze ── */
+  --silver:       #A9B0AC;
+  --silver-light: #CBD1CD;
+  --silver-dim:   #6E7570;
 
   /* ── Utility — unchanged, semantic not brand ─────────── */
   --rust:         #B8643E;
 
-  --display:      'Newsreader', serif;
-  --serif-title:  'Newsreader', serif;
-  --serif-body:   'Proza Libre', sans-serif;
-  --serif-alt:    'Caudex', serif;
+  --display:      'Zodiak', serif;
+  --serif-title:  'Zodiak', serif;
+  --serif-body:   'Switzer', sans-serif;
+  --serif-alt:    'Zodiak', serif;
   --mono:         'DM Mono', monospace;
-  --sans:         'Proza Libre', sans-serif;
+  --sans:         'Switzer', sans-serif;
+  --font-nav:     'Bricolage Grotesque', sans-serif;
 
   --radius-sm: 6px;
   --radius: 12px;
