@@ -39,6 +39,90 @@ import HeroSky from '../components/HeroSky.astro';
       </a>
     </div>
   </section>
+
+  <section class="claim">
+    <div class="container container-wide">
+      <p class="eyebrow eyebrow-dark">The Premise</p>
+      <h2>Buyers don't evaluate<br>the best product.<br>They evaluate the one<br>they understood first.</h2>
+      <p class="claim-sub">Every fracture in that understanding has a cost — slower procurement, discounted pricing, a misread category. Zordere measures it before it compounds.</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="container">
+      <p class="eyebrow eyebrow-dark" style="margin-bottom:44px;">Proof Through Diagnosis</p>
+      <div class="dossier-wrap">
+        <div class="dossier">
+          <div class="dossier-head">
+            <span class="title">Legibility Score — Diagnostic Summary</span>
+            <span>File 0114 · Hero Copy</span>
+          </div>
+          <span class="dossier-illustrative">Illustrative example, not a real client</span>
+          <div class="dossier-input">"We help teams work smarter with AI-powered workflows."</div>
+          <div class="score-row"><span class="score-num">41</span><span class="score-of">/ 100</span></div>
+          <div class="score-verdict">Intuitiveness failure — buyer cannot self-locate</div>
+          <div class="law-bars">
+            <div class="law-bar-row"><span class="law-bar-label">Tangibility</span><div class="law-bar-track"><div class="law-bar-fill fail" style="width:22%"></div></div><span class="law-bar-val">22</span></div>
+            <div class="law-bar-row"><span class="law-bar-label">Intuitiveness</span><div class="law-bar-track"><div class="law-bar-fill fail" style="width:38%"></div></div><span class="law-bar-val">38</span></div>
+            <div class="law-bar-row"><span class="law-bar-label">Sustainability</span><div class="law-bar-track"><div class="law-bar-fill" style="width:58%"></div></div><span class="law-bar-val">58</span></div>
+          </div>
+          <div class="fractures">
+            <div class="fractures-label">Fracture Points</div>
+            <div class="fracture-item"><span class="fnum">01</span><span>"Work smarter" is a category-wide claim — every competitor's homepage carries an equivalent line.</span></div>
+            <div class="fracture-item"><span class="fnum">02</span><span>"AI-powered workflows" names the mechanism, not the outcome a buyer can evaluate against their own problem.</span></div>
+            <div class="fracture-item"><span class="fnum">03</span><span>No stated buyer, category, or moment of use — the reader cannot self-locate within 5 seconds.</span></div>
+          </div>
+          <div class="dossier-seal">Z</div>
+        </div>
+      </div>
+      <div class="proof-cta">
+        <a href="/legibility-score/" class="btn-primary">Run this on your own copy →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-index">
+    <div class="container container-wide">
+      <p class="eyebrow">The IP</p>
+      <h2 class="fw-index-h">A proprietary vocabulary behind every diagnosis.</h2>
+      <div class="fw-grid">
+        <div class="fw-card"><span class="fw-num">01</span><h3>The Complexity Tax</h3><p>What unclear positioning costs in slower procurement, discounted pricing, and lost category authority.</p></div>
+        <div class="fw-card"><span class="fw-num">02</span><h3>The Interpretation Window</h3><p>The five seconds a buyer has to self-locate before they move on. Most homepages fail inside it.</p></div>
+        <div class="fw-card"><span class="fw-num">03</span><h3>RAFU</h3><p>The diagnostic method for surfacing the unwritten assumptions a category runs on before they're named.</p></div>
+      </div>
+      <a href="/frameworks/" class="fw-more">See every framework →</a>
+    </div>
+  </section>
+
+  <section class="quote-break">
+    <div class="container">
+      <div class="quote-mark">&ldquo;</div>
+      <blockquote>Buyers don't reward the best product. They reward the product they understood first.</blockquote>
+      <div class="quote-attr">— The Method, Zordere</div>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="container">
+      <p class="eyebrow">The Sequence</p>
+      <div class="method-grid">
+        <div class="method-item"><span class="method-num">I.</span><h3>Diagnose</h3><p>Score the current narrative against the Three Laws of Translation. Name the exact fracture points, not general feedback.</p></div>
+        <div class="method-item"><span class="method-num">II.</span><h3>Reconstruct</h3><p>Rebuild the positioning and language architecture from evidence, calibrated to how the specific buyer actually decides.</p></div>
+        <div class="method-item"><span class="method-num">III.</span><h3>Calibrate</h3><p>Hold the new narrative consistent across every touchpoint as the product, market, and category continue to move.</p></div>
+      </div>
+      <a href="/approach/" class="fw-more">Read the full method →</a>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Find out what your market actually understood.</h2>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a href="/legibility-score/" class="btn-primary">Run the Legibility Score →</a>
+        <a href="mailto:hello@zordere.com" class="btn-secondary">Commission a Diagnostic</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -56,5 +140,94 @@ import HeroSky from '../components/HeroSky.astro';
 
   @media (max-width: 860px) {
     .grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── Claim ────────────────────────────────────────────── */
+  .claim {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--void);
+    padding: 100px 0;
+  }
+  .container-wide { max-width: 1160px; }
+  .eyebrow-dark { color: var(--gold-dim) !important; }
+  .claim h2 {
+    font-family: var(--display); font-weight: 600; font-style: italic;
+    font-size: clamp(2.2rem, 6.4vw, 4.6rem); line-height: 1.04;
+    letter-spacing: -0.01em; margin: 0 0 30px; max-width: 900px; color: var(--void);
+  }
+  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(23,48,43,0.7); max-width: 460px; }
+
+  /* ── Proof / Dossier ──────────────────────────────────── */
+  .proof { background: var(--paper); color: var(--void); padding: 100px 0; }
+  .dossier-wrap { display: flex; justify-content: center; }
+  .dossier {
+    background: #fff; color: var(--void); width: 100%; max-width: 620px;
+    padding: 40px 40px 32px; border-radius: 3px; transform: rotate(-0.35deg);
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.22), 0 2px 0 rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .dossier::before { content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border: 1px solid rgba(23,48,43,0.14); pointer-events: none; }
+  .dossier-head { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(23,48,43,0.5); padding-bottom: 18px; border-bottom: 1px solid rgba(23,48,43,0.14); margin-bottom: 26px; }
+  .dossier-head .title { color: var(--void); font-weight: 500; font-size: 0.7rem; }
+  .dossier-illustrative { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); background: var(--gold-glow); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 20px; }
+  .dossier-input { font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: rgba(23,48,43,0.75); padding: 16px 18px; background: rgba(23,48,43,0.04); border-left: 2px solid var(--gold); margin-bottom: 30px; }
+  .score-row { display: flex; align-items: baseline; gap: 18px; margin-bottom: 6px; }
+  .score-num { font-family: var(--display); font-weight: 600; font-size: 4.4rem; line-height: 1; color: var(--void); font-variant-numeric: tabular-nums; }
+  .score-of { font-family: var(--mono); font-size: 0.9rem; color: rgba(23,48,43,0.4); }
+  .score-verdict { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rust); margin-bottom: 28px; }
+  .law-bars { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
+  .law-bar-row { display: grid; grid-template-columns: 108px 1fr 34px; align-items: center; gap: 12px; }
+  .law-bar-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(23,48,43,0.6); }
+  .law-bar-track { height: 5px; background: rgba(23,48,43,0.1); border-radius: 3px; overflow: hidden; }
+  .law-bar-fill { height: 100%; background: var(--gold-dim); border-radius: 3px; }
+  .law-bar-fill.fail { background: var(--rust); }
+  .law-bar-val { font-family: var(--mono); font-size: 0.72rem; text-align: right; color: rgba(23,48,43,0.55); }
+  .fractures { border-top: 1px solid rgba(23,48,43,0.14); padding-top: 22px; }
+  .fractures-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(23,48,43,0.45); margin-bottom: 12px; }
+  .fracture-item { display: flex; gap: 10px; font-size: 0.86rem; line-height: 1.55; color: rgba(23,48,43,0.78); margin-bottom: 10px; }
+  .fracture-item .fnum { font-family: var(--mono); color: var(--gold-dim); flex-shrink: 0; }
+  .dossier-seal { position: absolute; bottom: 30px; right: 36px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(107,83,48,0.4); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 1rem; color: rgba(107,83,48,0.7); }
+  .proof-cta { text-align: center; margin-top: 44px; }
+
+  /* ── Framework index ──────────────────────────────────── */
+  .fw-index { padding: 100px 0; }
+  .fw-index-h { font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin: 0 0 40px; max-width: 640px; }
+  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-thin-color, rgba(244,240,230,0.09)); border: var(--border-thin); }
+  .fw-card { background: var(--navy); padding: 32px 28px; }
+  .fw-card .fw-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 16px; display: block; }
+  .fw-card h3 { font-family: var(--display); font-size: 1.15rem; font-weight: 500; margin: 0 0 10px; }
+  .fw-card p { font-family: var(--serif-body); font-size: 0.84rem; line-height: 1.65; color: var(--ivory2); margin: 0; }
+  .fw-more { display: inline-block; margin-top: 32px; font-family: var(--font-nav); font-size: 0.85rem; color: var(--aegean-light); text-decoration: none; }
+  .fw-more:hover { color: var(--gold); }
+
+  /* ── Quote break ──────────────────────────────────────── */
+  .quote-break { background: var(--sand); padding: 110px 0; text-align: center; }
+  .quote-break .container { max-width: 760px; }
+  .quote-mark { font-family: var(--display); font-size: 3rem; color: var(--gold-dim); line-height: 1; margin-bottom: 8px; }
+  .quote-break blockquote { margin: 0 0 26px; font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; color: var(--ivory); }
+  .quote-attr { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+
+  /* ── Method ───────────────────────────────────────────── */
+  .method { padding: 110px 0; background: linear-gradient(160deg, var(--surface), var(--deep)); }
+  .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 46px; }
+  .method-item { padding: 0 28px; border-left: var(--border-thin); }
+  .method-item:first-child { padding-left: 0; border-left: none; }
+  .method-num { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 18px; display: block; }
+  .method-item h3 { font-family: var(--display); font-size: 1.2rem; font-weight: 500; margin-bottom: 12px; }
+  .method-item p { font-family: var(--serif-body); font-size: 0.88rem; line-height: 1.7; color: var(--ivory2); margin: 0; }
+
+  /* ── Closing CTA ──────────────────────────────────────── */
+  .cta-strip { padding: 100px 0; text-align: center; }
+  .cta-strip h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 0 0 34px; }
+
+  @media (max-width: 760px) {
+    .fw-grid { grid-template-columns: 1fr; }
+    .method-grid { grid-template-columns: 1fr; gap: 40px; }
+    .method-item { border-left: none; padding-left: 0; border-top: var(--border-thin); padding-top: 32px; }
+    .method-item:first-child { border-top: none; padding-top: 0; }
+    .dossier { padding: 28px 22px 26px; transform: rotate(0); }
+    .law-bar-row { grid-template-columns: 88px 1fr 30px; }
+    .score-num { font-size: 3.4rem; }
+    .claim, .proof, .fw-index, .quote-break, .method, .cta-strip { padding: 68px 0; }
   }
 </style>
