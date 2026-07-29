@@ -1,54 +1,52 @@
-/* src/styles/global.css */
-
 :root {
-  /* ── Base Surfaces — Zordere Teal Foundation (Version B Palette Study) ── */
+  /* ── Base Surfaces — Charcoal-Teal foundation (LOCKED: v2 palette study, Version B) ── */
   --navy:         #0F1B1C;
   --cobalt:       #0F1B1C;
   --deep:         #0A1414;
-  --void:         #12201F;
-  --ink:          #142E2B;
-  --surface:      #1A3733;
+  --void:         #16241F;
+  --ink:          #17302B;
+  --surface:      #14211F;
 
   /* ── Bone / Cool Paper System ─────────────────────────── */
   --ivory:        #F4F0E6;
   --ivory2:       #CFC7B4;
-  --cream:        #EAE4D6;
+  --cream:        #E4DDC9;
   --paper:        #F6F2E8;
   --muted:        #8D8A7F;
 
-  /* ── Aged Bronze / Gold (Locked for Buttons & Accents) ── */
-  --gold:         #9C7A45;
-  --gold-light:   #C2A06B;
-  --gold-dim:     #6B5330;
-  --gold-glow:    rgba(156,122,69,0.16);
+  /* ── SILVER — Primary accent (primary metallic voice) ── */
+  --gold:         #A9B0AC;
+  --gold-light:   #D1D7D3;
+  --gold-dim:     #6E7570;
+  --gold-glow:    rgba(169,176,172,0.14);
 
-  /* ── Structural Teal Accents ── */
-  --aegean:       #7BA396;
-  --aegean-light: #A9C9BE;
-  --sand:         #142E2B;
+  /* ── Bronze — Secondary accent (minor metallic voice only) ── */
+  --accent-bronze: #9C7A45;
+  --accent-bronze-light: #C2A06B;
+  --accent-bronze-dim: #6B5330;
 
-  /* ── Silver — Strict Minor Complimentary Adjustments Only ── */
-  --silver:       #A9B0AC;
-  --silver-light: #CBD1CD;
-  --silver-dim:   #6E7570;
+  /* ── Teal — NOW VISIBLE, not just structural ── */
+  --aegean:       #4A9184;
+  --aegean-light: #6FB3A6;
+  --sand:         #1A3733;
 
-  /* ── Utility ── */
-  --rust:         #A6472A;
+  /* ── Utility — unchanged, semantic not brand ─────────── */
+  --rust:         #B8643E;
 
-  --display:      'Newsreader', serif;
-  --serif-title:  'Newsreader', serif;
-  --serif-body:   'Proza Libre', sans-serif;
-  --serif-alt:    'Newsreader', serif;
-  --mono:         'DM Mono', monospace;
-  --sans:         'Proza Libre', sans-serif;
-  --font-nav:     'DM Mono', monospace;
+  --display:      'Zodiak', serif;
+  --serif-title:  'Zodiak', serif;
+  --serif-body:   'Switzer', sans-serif;
+  --serif-alt:    'Zodiak', serif;
+  --mono:         'IBM Plex Mono', monospace;
+  --sans:         'Switzer', sans-serif;
+  --font-nav:     'Bricolage Grotesque', sans-serif;
 
   --radius-sm: 6px;
   --radius: 12px;
   --radius-lg: 18px;
 
-  --border:       1px solid rgba(194,160,107,0.22);
-  --border-thin:  1px solid rgba(244,240,230,0.12);
+  --border:       1px solid rgba(200,164,93,0.22);
+  --border-thin:  1px solid rgba(247,241,227,0.12);
   --border-gold:  1px solid var(--gold);
 }
 
@@ -73,38 +71,18 @@ h1, h2, h3, h4 {
 a { color: inherit; }
 
 .container {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 28px;
-}
-
-.container-wide {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 24px;
 }
 
 .eyebrow {
   font-family: var(--mono);
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-light);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-.eyebrow::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.25;
-}
-.eyebrow.on-light {
-  color: var(--gold-dim);
+  color: var(--gold);
 }
 
 .btn-primary {
@@ -112,14 +90,14 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   background: var(--gold);
-  color: var(--deep);
+  color: var(--navy);
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 14px 26px;
   border: 1px solid var(--gold-light);
   border-radius: var(--radius-sm);
   transition: background 0.2s, transform 0.2s;
@@ -143,10 +121,10 @@ a { color: inherit; }
   border-radius: var(--radius-sm);
   transition: border-color 0.2s;
 }
-.btn-secondary:hover { border-color: var(--gold-light); }
+.btn-secondary:hover { border-color: var(--gold); }
 
-section { padding: 100px 0; }
+section { padding: 96px 0; }
 
-@media (max-width: 760px) {
-  section { padding: 68px 0; }
+@media (max-width: 720px) {
+  section { padding: 64px 0; }
 }
