@@ -1,50 +1,53 @@
 :root {
-  /* ── Palette B — Charcoal-Teal & Deep Tones ── */
-  --bg-base:       #0F1B1C;
-  --bg-base-deep:  #0A1414;
-  --bg-claim-a:    #7BA396;
-  --bg-claim-b:    #A9C9BE;
-  --bg-claim-text: #12201F;
-  --bg-surface:    #EAE4D6;
-  --bg-surface2:   #F6F2E8;
-  --bg-surface-text: #12201F;
-  --bg-deep2-a:    #1A3733;
-  --bg-deep2-b:    #142E2B;
+  /* ── Base Surfaces — Zordere Teal Foundation ── */
+  --navy:         #0F1B1C;
+  --cobalt:       #0F1B1C;
+  --deep:         #0A1414;
+  --void:         #12201F;
+  --ink:          #142E2B;
+  --surface:      #1A3733;
 
-  /* ── Bronze / Gold (Restored for Buttons & Accents) ── */
-  --gold:          #9C7A45;
-  --gold-light:    #C2A06B;
-  --gold-dim:      #6B5330;
-  --gold-glow:     rgba(156,122,69,0.16);
+  /* ── Bone / Cool Paper System ─────────────────────────── */
+  --ivory:        #F4F0E6;
+  --ivory2:       #CFC7B4;
+  --cream:        #EAE4D6;
+  --paper:        #F6F2E8;
+  --muted:        #8D8A7F;
 
-  /* ── Silver (Restored for Section Backdrops & Neutrals) ── */
-  --silver:        #A9B0AC;
-  --silver-light:  #CBD1CD;
-  --silver-dim:    #6E7570;
+  /* ── Aged Bronze / Gold (Locked for Buttons & Accents) ── */
+  --gold:         #9C7A45;
+  --gold-light:   #C2A06B;
+  --gold-dim:     #6B5330;
+  --gold-glow:    rgba(156,122,69,0.14);
 
-  /* ── Typography & Text Register ── */
-  --text-ivory:    #F4F0E6;
-  --text-ivory2:   #CFC7B4;
-  --muted:         #8D8A7F;
-  --fail:          #A6472A;
-  --charcoal:      #1B1C1E;
+  /* ── Structural Teal Accents ── */
+  --aegean:       #7BA396;
+  --aegean-light: #A9C9BE;
+  --sand:         #142E2B;
 
-  /* ── Typography Stack Rules ── */
-  --display:       'Zodiak', serif;
-  --serif-title:   'Zodiak', serif;
-  --serif-body:    'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-  --serif-alt:     'Zodiak', serif;
-  --mono:          'IBM Plex Mono', monospace;
-  --sans:          'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-nav:      'Bricolage Grotesque', sans-serif;
+  /* ── Silver — Strict Minor Complimentary Adjustments Only ── */
+  --silver:       #A9B0AC;
+  --silver-light: #CBD1CD;
+  --silver-dim:   #6E7570;
 
-  --radius-sm:     6px;
-  --radius:        12px;
-  --radius-lg:     18px;
+  /* ── Utility ── */
+  --rust:         #A6472A;
 
-  --border:        1px solid rgba(156,122,69,0.22);
-  --border-thin:   1px solid rgba(244,240,230,0.12);
-  --border-gold:   1px solid var(--gold);
+  --display:      'Zodiak', serif;
+  --serif-title:  'Zodiak', serif;
+  --serif-body:   'Switzer', sans-serif;
+  --serif-alt:    'Zodiak', serif;
+  --mono:         'DM Mono', monospace;
+  --sans:         'Switzer', sans-serif;
+  --font-nav:     'Bricolage Grotesque', sans-serif;
+
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+
+  --border:       1px solid rgba(194,160,107,0.22);
+  --border-thin:  1px solid rgba(244,240,230,0.12);
+  --border-gold:  1px solid var(--gold);
 }
 
 * { box-sizing: border-box; }
@@ -53,8 +56,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg-base);
-  color: var(--text-ivory);
+  background: var(--navy);
+  color: var(--ivory);
   font-family: var(--serif-body);
   -webkit-font-smoothing: antialiased;
 }
@@ -62,7 +65,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--display);
   margin: 0;
-  color: var(--text-ivory);
+  color: var(--ivory);
 }
 
 a { color: inherit; }
@@ -79,16 +82,15 @@ a { color: inherit; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
 }
 
-/* Restored Bronze/Gold Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: var(--gold);
-  color: var(--bg-base-deep);
+  color: var(--deep);
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 700;
@@ -107,7 +109,7 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: var(--text-ivory);
+  color: var(--ivory);
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 700;
@@ -119,7 +121,7 @@ a { color: inherit; }
   border-radius: var(--radius-sm);
   transition: border-color 0.2s;
 }
-.btn-secondary:hover { border-color: var(--gold); }
+.btn-secondary:hover { border-color: var(--gold-light); }
 
 section { padding: 96px 0; }
 
