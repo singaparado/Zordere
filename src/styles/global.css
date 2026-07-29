@@ -1,56 +1,50 @@
 :root {
-  /* ── Base Surfaces — Charcoal-Teal foundation (Palette B) ── */
-  --navy:         #0F1B1C;
-  --cobalt:       #0F1B1C;
-  --deep:         #0A1414;
-  --void:         #16241F;
-  --ink:          #17302B;
-  --surface:      #14211F;
+  /* ── Palette B — Charcoal-Teal Foundation ── */
+  --bg-base:       #0F1B1C;
+  --bg-base-deep:  #0A1414;
+  --bg-claim-a:    #7BA396;
+  --bg-claim-b:    #A9C9BE;
+  --bg-claim-text: #12201F;
+  --bg-surface:    #EAE4D6;
+  --bg-surface2:   #F6F2E8;
+  --bg-surface-text: #12201F;
+  --bg-deep2-a:    #1A3733;
+  --bg-deep2-b:    #142E2B;
 
-  /* ── Bone / Cool Paper System ─────────────────────────── */
-  --ivory:        #F4F0E6;
-  --ivory2:       #CFC7B4;
-  --cream:        #E4DDC9;
-  --paper:        #F6F2E8;
-  --muted:        #8D8A7F;
+  /* ── Bronze / Gold (Buttons & Interactive Accents) ── */
+  --gold:          #9C7A45;
+  --gold-light:    #C2A06B;
+  --gold-dim:      #6B5330;
+  --gold-glow:     rgba(156,122,69,0.16);
 
-  /* ── Golden / Bronze — Primary Button & Interactive Accent ── */
-  --gold:         #B08A4E;
-  --gold-light:   #D9B679;
-  --gold-dim:     #6B5330;
-  --gold-glow:    rgba(176,138,78,0.14);
+  /* ── Silver (Section Backgrounds & Neutral Counterweights) ── */
+  --silver:        #A9B0AC;
+  --silver-light:  #CBD1CD;
+  --silver-dim:    #6E7570;
 
-  /* ── Rich Teal Accent & Backdrops (Palette B derived) ── */
-  --aegean:       #2E6B60;
-  --aegean-light: #5FA898;
-  --teal-deep:    #162E2B;
-  --teal-deep2:   #1A3733;
-  --sand:         #23302B;
+  /* ── Typography & Text Register ── */
+  --text-ivory:    #F4F0E6;
+  --text-ivory2:   #CFC7B4;
+  --muted:         #8D8A7F;
+  --fail:          #A6472A;
+  --charcoal:      #1B1C1E;
 
-  /* ── Silver — Section Background / Neutral Counterweight ── */
-  --silver:       #A9B0AC;
-  --silver-light: #CBD1CD;
-  --silver-dim:   #6E7570;
+  /* ── Typography Stack Rules ── */
+  --display:       'Zodiak', serif;
+  --serif-title:   'Zodiak', serif;
+  --serif-body:    'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  --serif-alt:     'Zodiak', serif;
+  --mono:          'IBM Plex Mono', monospace;
+  --sans:          'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-nav:      'Bricolage Grotesque', sans-serif;
 
-  /* ── Utility ─────────────────────────── */
-  --rust:         #B8643E;
+  --radius-sm:     6px;
+  --radius:        12px;
+  --radius-lg:     18px;
 
-  /* ── Typography Stack Rules ─────────── */
-  --display:      'Zodiak', serif;
-  --serif-title:  'Zodiak', serif;
-  --serif-body:   'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-  --serif-alt:    'Zodiak', serif;
-  --mono:         'IBM Plex Mono', monospace;
-  --sans:         'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-nav:     'Bricolage Grotesque', sans-serif;
-
-  --radius-sm: 6px;
-  --radius: 12px;
-  --radius-lg: 18px;
-
-  --border:       1px solid rgba(176,138,78,0.22);
-  --border-thin:  1px solid rgba(247,241,227,0.12);
-  --border-gold:  1px solid var(--gold);
+  --border:        1px solid rgba(156,122,69,0.22);
+  --border-thin:   1px solid rgba(244,240,230,0.12);
+  --border-gold:   1px solid var(--gold);
 }
 
 * { box-sizing: border-box; }
@@ -59,8 +53,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--navy);
-  color: var(--ivory);
+  background: var(--bg-base);
+  color: var(--text-ivory);
   font-family: var(--serif-body);
   -webkit-font-smoothing: antialiased;
 }
@@ -68,7 +62,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--display);
   margin: 0;
-  color: var(--ivory);
+  color: var(--text-ivory);
 }
 
 a { color: inherit; }
@@ -93,7 +87,7 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   background: var(--gold);
-  color: var(--navy);
+  color: var(--bg-base-deep);
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 700;
@@ -112,7 +106,7 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: var(--ivory);
+  color: var(--text-ivory);
   font-family: var(--mono);
   font-size: 0.8rem;
   font-weight: 700;
