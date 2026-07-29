@@ -1,6 +1,5 @@
-/* src/styles/global.css */
 :root {
-  /* ── Base Surfaces — Zordere Teal Foundation (Version B Palette Study) ── */
+  /* ── Base Surfaces — Zordere Teal Foundation ── */
   --navy:         #0F1B1C;
   --cobalt:       #0F1B1C;
   --deep:         #0A1414;
@@ -19,7 +18,7 @@
   --gold:         #9C7A45;
   --gold-light:   #C2A06B;
   --gold-dim:     #6B5330;
-  --gold-glow:    rgba(156,122,69,0.16);
+  --gold-glow:    rgba(156,122,69,0.14);
 
   /* ── Structural Teal Accents ── */
   --aegean:       #7BA396;
@@ -34,13 +33,13 @@
   /* ── Utility ── */
   --rust:         #A6472A;
 
-  --display:      'Newsreader', serif;
-  --serif-title:  'Newsreader', serif;
-  --serif-body:   'Proza Libre', sans-serif;
-  --serif-alt:    'Newsreader', serif;
+  --display:      'Zodiak', serif;
+  --serif-title:  'Zodiak', serif;
+  --serif-body:   'Switzer', sans-serif;
+  --serif-alt:    'Zodiak', serif;
   --mono:         'DM Mono', monospace;
-  --sans:         'Proza Libre', sans-serif;
-  --font-nav:     'DM Mono', monospace;
+  --sans:         'Switzer', sans-serif;
+  --font-nav:     'Bricolage Grotesque', sans-serif;
 
   --radius-sm: 6px;
   --radius: 12px;
@@ -72,38 +71,18 @@ h1, h2, h3, h4 {
 a { color: inherit; }
 
 .container {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 28px;
-}
-
-.container-wide {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 24px;
 }
 
 .eyebrow {
   font-family: var(--mono);
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-light);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
-}
-.eyebrow::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.25;
-}
-.eyebrow.on-light {
-  color: var(--gold-dim);
 }
 
 .btn-primary {
@@ -118,7 +97,7 @@ a { color: inherit; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 14px 26px;
   border: 1px solid var(--gold-light);
   border-radius: var(--radius-sm);
   transition: background 0.2s, transform 0.2s;
@@ -144,8 +123,8 @@ a { color: inherit; }
 }
 .btn-secondary:hover { border-color: var(--gold-light); }
 
-section { padding: 100px 0; }
+section { padding: 96px 0; }
 
-@media (max-width: 760px) {
-  section { padding: 68px 0; }
+@media (max-width: 720px) {
+  section { padding: 64px 0; }
 }
