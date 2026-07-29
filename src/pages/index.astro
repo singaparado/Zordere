@@ -129,23 +129,23 @@ import HeroSky from '../components/HeroSky.astro';
   .hero { position: relative; overflow: hidden; padding: 120px 0 80px; isolation: isolate; }
   .hero .container { position: relative; z-index: 10; }
   .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 20px 0 24px; max-width: 780px; }
-  .hero-sub { font-family: var(--serif-body); font-size: 1.15rem; line-height: 1.7; color: var(--ivory2); max-width: 620px; margin-bottom: 36px; }
+  .hero-sub { font-family: var(--serif-body); font-size: 1.15rem; line-height: 1.7; color: var(--text-ivory2); max-width: 620px; margin-bottom: 36px; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .entry-card { display: block; text-decoration: none; padding: 32px; border: var(--border-thin); border-radius: var(--radius); background: var(--surface); transition: border-color 0.2s; }
-  .entry-card:hover { border-color: var(--silver); }
+  .entry-card { display: block; text-decoration: none; padding: 32px; border: var(--border-thin); border-radius: var(--radius); background: var(--bg-surface); color: var(--bg-surface-text); transition: border-color 0.2s; }
+  .entry-card:hover { border-color: var(--gold); }
   .entry-card h3 { font-size: 1.3rem; margin: 10px 0 12px; }
-  .entry-card p { font-family: var(--serif-body); font-size: 0.92rem; line-height: 1.6; color: var(--ivory2); margin: 0; }
+  .entry-card p { font-family: var(--serif-body); font-size: 0.92rem; line-height: 1.6; color: var(--muted); margin: 0; }
 
   @media (max-width: 860px) {
     .grid { grid-template-columns: 1fr; }
   }
 
-  /* ── Claim ────────────────────────────────────────────── */
+  /* ── Claim Section (Silver Backdrop) ──────────────────── */
   .claim {
     background: linear-gradient(135deg, var(--silver) 0%, var(--silver-light) 100%);
-    color: var(--void);
+    color: var(--bg-surface-text);
     padding: 100px 0;
   }
   .container-wide { max-width: 1160px; }
@@ -153,72 +153,72 @@ import HeroSky from '../components/HeroSky.astro';
   .claim h2 {
     font-family: var(--display); font-weight: 600; font-style: italic;
     font-size: clamp(2.2rem, 6.4vw, 4.6rem); line-height: 1.04;
-    letter-spacing: -0.01em; margin: 0 0 30px; max-width: 900px; color: var(--void);
+    letter-spacing: -0.01em; margin: 0 0 30px; max-width: 900px; color: var(--bg-surface-text);
   }
-  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(23,48,43,0.7); max-width: 460px; }
+  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(18,32,31,0.7); max-width: 460px; }
 
   /* ── Proof / Dossier ──────────────────────────────────── */
-  .proof { background: var(--paper); color: var(--void); padding: 100px 0; }
+  .proof { background: var(--bg-surface2); color: var(--bg-surface-text); padding: 100px 0; }
   .dossier-wrap { display: flex; justify-content: center; }
   .dossier {
-    background: #fff; color: var(--void); width: 100%; max-width: 620px;
+    background: #fff; color: var(--bg-surface-text); width: 100%; max-width: 620px;
     padding: 40px 40px 32px; border-radius: 3px; transform: rotate(-0.35deg);
     box-shadow: 0 30px 70px -20px rgba(0,0,0,0.22), 0 2px 0 rgba(0,0,0,0.04);
     position: relative;
   }
-  .dossier::before { content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border: 1px solid rgba(23,48,43,0.14); pointer-events: none; }
-  .dossier-head { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(23,48,43,0.5); padding-bottom: 18px; border-bottom: 1px solid rgba(23,48,43,0.14); margin-bottom: 26px; }
-  .dossier-head .title { color: var(--void); font-weight: 500; font-size: 0.7rem; }
+  .dossier::before { content: ''; position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border: 1px solid rgba(18,32,31,0.14); pointer-events: none; }
+  .dossier-head { display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(18,32,31,0.5); padding-bottom: 18px; border-bottom: 1px solid rgba(18,32,31,0.14); margin-bottom: 26px; }
+  .dossier-head .title { color: var(--bg-surface-text); font-weight: 500; font-size: 0.7rem; }
   .dossier-illustrative { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); background: var(--gold-glow); padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 20px; }
-  .dossier-input { font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: rgba(23,48,43,0.75); padding: 16px 18px; background: rgba(23,48,43,0.04); border-left: 2px solid var(--gold); margin-bottom: 30px; }
+  .dossier-input { font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: rgba(18,32,31,0.75); padding: 16px 18px; background: rgba(18,32,31,0.04); border-left: 2px solid var(--gold); margin-bottom: 30px; }
   .score-row { display: flex; align-items: baseline; gap: 18px; margin-bottom: 6px; }
-  .score-num { font-family: var(--display); font-weight: 600; font-size: 4.4rem; line-height: 1; color: var(--void); font-variant-numeric: tabular-nums; }
-  .score-of { font-family: var(--mono); font-size: 0.9rem; color: rgba(23,48,43,0.4); }
-  .score-verdict { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rust); margin-bottom: 28px; }
+  .score-num { font-family: var(--display); font-weight: 600; font-size: 4.4rem; line-height: 1; color: var(--bg-surface-text); font-variant-numeric: tabular-nums; }
+  .score-of { font-family: var(--mono); font-size: 0.9rem; color: rgba(18,32,31,0.4); }
+  .score-verdict { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fail); margin-bottom: 28px; }
   .law-bars { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
   .law-bar-row { display: grid; grid-template-columns: 108px 1fr 34px; align-items: center; gap: 12px; }
-  .law-bar-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(23,48,43,0.6); }
-  .law-bar-track { height: 5px; background: rgba(23,48,43,0.1); border-radius: 3px; overflow: hidden; }
-  .law-bar-fill { height: 100%; background: var(--silver-dim); border-radius: 3px; }
-  .law-bar-fill.fail { background: var(--rust); }
-  .law-bar-val { font-family: var(--mono); font-size: 0.72rem; text-align: right; color: rgba(23,48,43,0.55); }
-  .fractures { border-top: 1px solid rgba(23,48,43,0.14); padding-top: 22px; }
-  .fractures-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(23,48,43,0.45); margin-bottom: 12px; }
-  .fracture-item { display: flex; gap: 10px; font-size: 0.86rem; line-height: 1.55; color: rgba(23,48,43,0.78); margin-bottom: 10px; }
-  .fracture-item .fnum { font-family: var(--mono); color: var(--silver-dim); flex-shrink: 0; }
-  .dossier-seal { position: absolute; bottom: 30px; right: 36px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(110,117,112,0.4); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 1rem; color: rgba(110,117,112,0.7); }
+  .law-bar-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(18,32,31,0.6); }
+  .law-bar-track { height: 5px; background: rgba(18,32,31,0.1); border-radius: 3px; overflow: hidden; }
+  .law-bar-fill { height: 100%; background: var(--gold-dim); border-radius: 3px; }
+  .law-bar-fill.fail { background: var(--fail); }
+  .law-bar-val { font-family: var(--mono); font-size: 0.72rem; text-align: right; color: rgba(18,32,31,0.55); }
+  .fractures { border-top: 1px solid rgba(18,32,31,0.14); padding-top: 22px; }
+  .fractures-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(18,32,31,0.45); margin-bottom: 12px; }
+  .fracture-item { display: flex; gap: 10px; font-size: 0.86rem; line-height: 1.55; color: rgba(18,32,31,0.78); margin-bottom: 10px; }
+  .fracture-item .fnum { font-family: var(--mono); color: var(--gold-dim); flex-shrink: 0; }
+  .dossier-seal { position: absolute; bottom: 30px; right: 36px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--gold-dim); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 1rem; color: var(--gold-dim); }
   .proof-cta { text-align: center; margin-top: 44px; }
 
   /* ── Framework index ──────────────────────────────────── */
-  .fw-index { padding: 100px 0; }
+  .fw-index { padding: 100px 0; background: var(--bg-base); }
   .fw-index-h { font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin: 0 0 40px; max-width: 640px; }
-  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-thin-color, rgba(244,240,230,0.09)); border: var(--border-thin); }
-  .fw-card { background: var(--navy); padding: 32px 28px; }
-  .fw-card .fw-num { font-family: var(--mono); font-size: 0.68rem; color: var(--silver); letter-spacing: 0.06em; margin-bottom: 16px; display: block; }
-  .fw-card h3 { font-family: var(--display); font-size: 1.15rem; font-weight: 500; margin: 0 0 10px; }
-  .fw-card p { font-family: var(--serif-body); font-size: 0.84rem; line-height: 1.65; color: var(--ivory2); margin: 0; }
-  .fw-more { display: inline-block; margin-top: 32px; font-family: var(--font-nav); font-size: 0.85rem; color: var(--aegean-light); text-decoration: none; }
-  .fw-more:hover { color: var(--silver); }
+  .fw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(244,240,230,0.09); border: var(--border-thin); }
+  .fw-card { background: var(--bg-base-deep); padding: 32px 28px; }
+  .fw-card .fw-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 16px; display: block; }
+  .fw-card h3 { font-family: var(--display); font-size: 1.15rem; font-weight: 500; margin: 0 0 10px; color: var(--text-ivory); }
+  .fw-card p { font-family: var(--serif-body); font-size: 0.84rem; line-height: 1.65; color: var(--text-ivory2); margin: 0; }
+  .fw-more { display: inline-block; margin-top: 32px; font-family: var(--font-nav); font-size: 0.85rem; color: var(--gold-light); text-decoration: none; }
+  .fw-more:hover { color: var(--gold); }
 
   /* ── Quote break ──────────────────────────────────────── */
-  .quote-break { background: var(--sand); padding: 110px 0; text-align: center; }
+  .quote-break { background: var(--charcoal); padding: 110px 0; text-align: center; }
   .quote-break .container { max-width: 760px; }
-  .quote-mark { font-family: var(--display); font-size: 3rem; color: var(--silver-dim); line-height: 1; margin-bottom: 8px; }
-  .quote-break blockquote { margin: 0 0 26px; font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; color: var(--ivory); }
-  .quote-attr { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); }
+  .quote-mark { font-family: var(--display); font-size: 3rem; color: var(--gold-dim); line-height: 1; margin-bottom: 8px; }
+  .quote-break blockquote { margin: 0 0 26px; font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; color: var(--text-ivory); }
+  .quote-attr { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
 
   /* ── Method ───────────────────────────────────────────── */
-  .method { padding: 110px 0; background: linear-gradient(160deg, var(--surface), var(--deep)); }
+  .method { padding: 110px 0; background: linear-gradient(160deg, var(--bg-deep2-a), var(--bg-deep2-b)); }
   .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 46px; }
   .method-item { padding: 0 28px; border-left: var(--border-thin); }
   .method-item:first-child { padding-left: 0; border-left: none; }
-  .method-num { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: var(--silver-light); margin-bottom: 18px; display: block; }
-  .method-item h3 { font-family: var(--display); font-size: 1.2rem; font-weight: 500; margin-bottom: 12px; }
-  .method-item p { font-family: var(--serif-body); font-size: 0.88rem; line-height: 1.7; color: var(--ivory2); margin: 0; }
+  .method-num { font-family: var(--display); font-style: italic; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 18px; display: block; }
+  .method-item h3 { font-family: var(--display); font-size: 1.2rem; font-weight: 500; margin-bottom: 12px; color: var(--text-ivory); }
+  .method-item p { font-family: var(--serif-body); font-size: 0.88rem; line-height: 1.7; color: var(--text-ivory2); margin: 0; }
 
   /* ── Closing CTA ──────────────────────────────────────── */
-  .cta-strip { padding: 100px 0; text-align: center; }
-  .cta-strip h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 0 0 34px; }
+  .cta-strip { padding: 100px 0; text-align: center; background: var(--bg-base); }
+  .cta-strip h2 { font-family: var(--display); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2.3rem); margin: 0 0 34px; color: var(--text-ivory); }
 
   @media (max-width: 760px) {
     .fw-grid { grid-template-columns: 1fr; }
