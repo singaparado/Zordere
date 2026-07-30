@@ -14,21 +14,22 @@
   --paper:        #F6F2E8;
   --muted:        #8D8A7F;
 
-  /* ── SILVER — Primary accent (primary metallic voice) ── */
-  --gold:         #A9B0AC;
-  --gold-light:   #D1D7D3;
-  --gold-dim:     #6E7570;
-  --gold-glow:    rgba(169,176,172,0.14);
+  /* ── Bronze — Primary interactive accent (buttons, CTAs) ── */
+  --gold:         #9C7A45;
+  --gold-light:   #C2A06B;
+  --gold-dim:     #6B5330;
+  --gold-glow:    rgba(156,122,69,0.14);
 
-  /* ── Bronze — Secondary accent (minor metallic voice only) ── */
-  --accent-bronze: #9C7A45;
-  --accent-bronze-light: #C2A06B;
-  --accent-bronze-dim: #6B5330;
-
-  /* ── Teal — NOW VISIBLE, not just structural ── */
-  --aegean:       #4A9184;
-  --aegean-light: #6FB3A6;
+  /* ── Teal — Featured accent (the color to lead with) ─── */
+  --aegean:       #3E7A6D;
+  --aegean-light: #7BA396;
   --sand:         #1A3733;
+
+  /* ── Silver — a section surface, not just an accent ──── */
+  --silver-bg:    #DCE0DD;
+  --silver-bg2:   #C9CFCB;
+  --silver:       #A9B0AC;
+  --silver-dim:   #6E7570;
 
   /* ── Utility — unchanged, semantic not brand ─────────── */
   --rust:         #B8643E;
@@ -45,9 +46,31 @@
   --radius: 12px;
   --radius-lg: 18px;
 
-  --border:       1px solid rgba(200,164,93,0.22);
+  --border:       1px solid rgba(156,122,69,0.22);
   --border-thin:  1px solid rgba(247,241,227,0.12);
   --border-gold:  1px solid var(--gold);
+}
+
+/* ── Scroll-reveal utility — the "soul" pass ─────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.lift-on-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.lift-on-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -16px rgba(0,0,0,0.35);
 }
 
 * { box-sizing: border-box; }
