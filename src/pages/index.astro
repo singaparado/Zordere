@@ -12,7 +12,7 @@ import HeroSky from '../components/HeroSky.astro';
     <div class="container">
       <p class="eyebrow">Executive Advisory &amp; Communication Intelligence</p>
       <h1>Your product outgrew how the market understands it.</h1>
-      <p class="hero-sub">Zordere diagnoses and rebuilds the language layer between what sophisticated organizations have built and what buyers, investors, and partners actually understand.</p>
+      <p class="hero-sub">Zordere measures that gap, and closes it — before it costs you the deal.</p>
       <div class="hero-ctas">
         <a href="/legibility-score/" class="btn-primary">Run the Legibility Score →</a>
         <a href="/approach/" class="btn-secondary">See the Method</a>
@@ -20,19 +20,19 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="entry-grid reveal">
+  <section class="entry-grid" data-aos="fade-up">
     <div class="container grid">
-      <a href="/frameworks/" class="entry-card lift-on-hover">
+      <a href="/frameworks/" class="entry-card lift-on-hover" data-aos="fade-up">
         <span class="eyebrow">The IP</span>
         <h3>Frameworks</h3>
         <p>The Complexity Tax, the Interpretation Window, RAFU, and the Three Laws of Translation — the proprietary vocabulary behind every diagnosis.</p>
       </a>
-      <a href="/legibility-score/" class="entry-card lift-on-hover">
+      <a href="/legibility-score/" class="entry-card lift-on-hover" data-aos="fade-up" data-aos-delay="100">
         <span class="eyebrow">Free Diagnostic</span>
         <h3>Legibility Score</h3>
         <p>Paste your hero copy. Get a 0–100 score and see exactly where your narrative fractures.</p>
       </a>
-      <a href="/services/" class="entry-card lift-on-hover">
+      <a href="/services/" class="entry-card lift-on-hover" data-aos="fade-up" data-aos-delay="200">
         <span class="eyebrow">Engagements</span>
         <h3>Services</h3>
         <p>From a single audit to an ongoing narrative retainer — structured for how sophisticated organizations actually buy.</p>
@@ -40,7 +40,43 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="claim reveal">
+  <section class="narrative-archive" data-aos="fade-up">
+    <div class="container">
+      <p class="eyebrow">Signal — Live Demonstration</p>
+      <h2 class="na-title">The Narrative Archive</h2>
+      <p class="na-intro">Technical accuracy is the skeleton. Zordere builds the architecture of human understanding around it. Select a case to see the translation.</p>
+
+      <div class="na-console" data-aos="zoom-in" data-aos-delay="150">
+        <div class="na-console-bar">
+          <div class="na-dots"><span></span><span></span><span></span></div>
+          <div class="na-console-title">// Product Translation Database</div>
+        </div>
+        <div class="na-body">
+          <div class="na-input-pane">
+            <label class="na-label">Active Parameters</label>
+            <div id="na-case-display" class="na-display">Select a case to begin.</div>
+            <div class="na-pills">
+              <button type="button" class="na-pill" data-case="workflow">Workflow Orchestration</button>
+              <button type="button" class="na-pill" data-case="habit">Habit Gamification</button>
+              <button type="button" class="na-pill" data-case="notebook">Notebook</button>
+              <button type="button" class="na-pill" data-case="cloud-backup">Cloud Backup</button>
+              <button type="button" class="na-pill" data-case="ui-friction">UI Friction</button>
+              <button type="button" class="na-pill" data-case="asset-management">Asset Management</button>
+            </div>
+          </div>
+          <div class="na-action-row">
+            <span id="na-status" class="na-status">Archive standby. Awaiting input.</span>
+            <button type="button" id="na-reveal-btn" class="btn-primary">Reveal Narrative Shift</button>
+          </div>
+          <div class="na-output-pane">
+            <div id="na-output" class="na-output">// Awaiting selection...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="claim" data-aos="fade-up">
     <div class="container container-wide">
       <p class="eyebrow eyebrow-dark">The Premise</p>
       <h2>Buyers don't evaluate<br>the best product.<br>They evaluate the one<br>they understood first.</h2>
@@ -48,7 +84,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="proof reveal">
+  <section class="proof" data-aos="fade-up">
     <div class="container">
       <p class="eyebrow eyebrow-dark" style="margin-bottom:44px;">Proof Through Diagnosis</p>
       <div class="dossier-wrap">
@@ -81,28 +117,28 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="architecture reveal">
+  <section class="architecture" data-aos="fade-up">
     <div class="container container-wide">
       <p class="eyebrow eyebrow-dark">The System</p>
       <h2 class="arch-h">Four layers. One instrument.</h2>
       <p class="arch-sub">Every diagnostic sits on top of a deeper architecture — most of it still being built beneath the surface.</p>
       <div class="arch-grid">
-        <div class="arch-card arch-live">
+        <div class="arch-card arch-live" data-aos="fade-up">
           <span class="arch-status">Live</span>
           <h3>Signal</h3>
           <p>What a client sees first. Every diagnostic already shipped — score, audit, fracture point, verdict.</p>
         </div>
-        <div class="arch-card">
+        <div class="arch-card" data-aos="fade-up" data-aos-delay="100">
           <span class="arch-status">In development</span>
           <h3>Ledger</h3>
           <p>Where a company's frameworks and claims stop living in decks and become a structured record.</p>
         </div>
-        <div class="arch-card">
+        <div class="arch-card" data-aos="fade-up" data-aos-delay="200">
           <span class="arch-status">In development</span>
           <h3>Lattice</h3>
           <p>The reasoning layer — tracing what depends on what, and what breaks if a single term changes.</p>
         </div>
-        <div class="arch-card">
+        <div class="arch-card" data-aos="fade-up" data-aos-delay="300">
           <span class="arch-status">In development</span>
           <h3>Substrate</h3>
           <p>The engineering floor underneath everything else — the graph store, retrieval, and models doing the tracing.</p>
@@ -111,20 +147,20 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="fw-index reveal">
+  <section class="fw-index" data-aos="fade-up">
     <div class="container container-wide">
       <p class="eyebrow">The IP</p>
       <h2 class="fw-index-h">A proprietary vocabulary behind every diagnosis.</h2>
       <div class="fw-grid">
-        <div class="fw-card lift-on-hover"><span class="fw-num">01</span><h3>The Complexity Tax</h3><p>What unclear positioning costs in slower procurement, discounted pricing, and lost category authority.</p></div>
-        <div class="fw-card lift-on-hover"><span class="fw-num">02</span><h3>The Interpretation Window</h3><p>The five seconds a buyer has to self-locate before they move on. Most homepages fail inside it.</p></div>
-        <div class="fw-card lift-on-hover"><span class="fw-num">03</span><h3>RAFU</h3><p>The diagnostic method for surfacing the unwritten assumptions a category runs on before they're named.</p></div>
+        <div class="fw-card lift-on-hover" data-aos="fade-up"><span class="fw-num">01</span><h3>The Complexity Tax</h3><p>What unclear positioning costs in slower procurement, discounted pricing, and lost category authority.</p></div>
+        <div class="fw-card lift-on-hover" data-aos="fade-up" data-aos-delay="100"><span class="fw-num">02</span><h3>The Interpretation Window</h3><p>The five seconds a buyer has to self-locate before they move on. Most homepages fail inside it.</p></div>
+        <div class="fw-card lift-on-hover" data-aos="fade-up" data-aos-delay="200"><span class="fw-num">03</span><h3>RAFU</h3><p>The diagnostic method for surfacing the unwritten assumptions a category runs on before they're named.</p></div>
       </div>
       <a href="/frameworks/" class="fw-more">See every framework →</a>
     </div>
   </section>
 
-  <section class="quote-break reveal">
+  <section class="quote-break" data-aos="zoom-in">
     <div class="container">
       <div class="quote-mark">&ldquo;</div>
       <blockquote>Buyers don't reward the best product. They reward the product they understood first.</blockquote>
@@ -132,7 +168,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="method reveal">
+  <section class="method" data-aos="fade-up">
     <div class="container">
       <p class="eyebrow">The Sequence</p>
       <div class="method-grid">
@@ -144,7 +180,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="cta-strip reveal">
+  <section class="cta-strip" data-aos="fade-up">
     <div class="container">
       <h2>Find out what your market actually understood.</h2>
       <div class="hero-ctas" style="justify-content:center;">
@@ -154,6 +190,68 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const archive: Record<string, { before: string; after: string }> = {
+    workflow: {
+      before: "Our AI-native, multi-tenant infrastructure with sub-10ms latency enables cross-functional workflow orchestration.",
+      after: "Your team keeps dropping things between meetings. We make sure nothing gets lost again.",
+    },
+    habit: {
+      before: "Leveraging advanced behavioral gamification topologies and social graphs to optimize personal contextual milestones.",
+      after: "Build better daily habits alongside your friends. No streaks to maintain — just real progress you can see.",
+    },
+    notebook: {
+      before: "Premium leather-bound journal with high-GSM paper and durable binding.",
+      after: "A grainy, suede-bound daybook built to hold 365 pages of the stories only you would tell.",
+    },
+    "cloud-backup": {
+      before: "Robust cloud backup architecture with redundant sync and low-latency recovery.",
+      after: "When the WiFi fails mid-trip, your work stays exactly where you left it — safe while you sleep.",
+    },
+    "ui-friction": {
+      before: "The platform optimizes user interface friction to improve task completion rates.",
+      after: "A screen that stops reinventing new ways to steal your attention, and starts helping you finish.",
+    },
+    "asset-management": {
+      before: "Enterprise-grade asset management system with centralized data validation and automated permission hierarchies.",
+      after: "Not a database — a living territory, where every asset has a district, a history, and a system that keeps order.",
+    },
+  };
+
+  let currentCase: string | null = null;
+  const display = document.getElementById('na-case-display');
+  const status = document.getElementById('na-status');
+  const output = document.getElementById('na-output');
+  const pills = document.querySelectorAll<HTMLButtonElement>('.na-pill');
+  const revealBtn = document.getElementById('na-reveal-btn');
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const id = pill.dataset.case;
+      if (!id || !(id in archive)) return;
+      pills.forEach((p) => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentCase = id;
+      if (display) display.textContent = archive[id].before;
+      if (output) output.textContent = '// Ready to reveal narrative shift.';
+      if (status) status.textContent = `Case loaded: ${id.toUpperCase()}`;
+    });
+  });
+
+  revealBtn?.addEventListener('click', () => {
+    if (!currentCase || !output || !status) {
+      if (status) status.textContent = 'Select a case above first.';
+      return;
+    }
+    output.style.opacity = '0';
+    setTimeout(() => {
+      output.textContent = archive[currentCase as string].after;
+      output.style.opacity = '1';
+      status.textContent = 'Transformation integrated.';
+    }, 250);
+  });
+</script>
 
 <style>
   .hero { position: relative; overflow: hidden; padding: 120px 0 80px; isolation: isolate; }
@@ -174,7 +272,7 @@ import HeroSky from '../components/HeroSky.astro';
 
   /* ── Claim / Premise — now teal, not gold ────────────── */
   .claim {
-    background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-light) 100%);
+    background: linear-gradient(160deg, #7BA396 0%, #A9C9BE 100%);
     color: var(--void);
     padding: 100px 0;
   }
@@ -198,6 +296,45 @@ import HeroSky from '../components/HeroSky.astro';
   .arch-live .arch-status { color: var(--aegean); font-weight: 600; }
   .arch-card h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; margin: 0 0 10px; color: var(--void); }
   .arch-card p { font-family: var(--serif-body); font-size: 0.82rem; line-height: 1.6; color: rgba(22,36,31,0.72); margin: 0; }
+
+  /* ── Narrative Archive — interactive console ─────────── */
+  .narrative-archive { padding: 100px 0; }
+  .na-title { font-family: var(--display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 14px 0 16px; }
+  .na-intro { font-family: var(--serif-body); font-size: 1rem; line-height: 1.75; color: var(--ivory2); max-width: 560px; margin: 0 0 44px; }
+
+  .na-console { border: var(--border-thin); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+  .na-console-bar { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: var(--void); border-bottom: var(--border-thin); }
+  .na-dots { display: flex; gap: 6px; }
+  .na-dots span { width: 9px; height: 9px; border-radius: 50%; background: var(--gold-dim); }
+  .na-dots span:first-child { background: var(--gold); }
+  .na-console-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; color: var(--ivory2); text-transform: uppercase; }
+
+  .na-body { padding: 32px 28px 36px; }
+  .na-label { display: block; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--aegean-light); margin-bottom: 12px; }
+  .na-display {
+    font-family: var(--display); font-style: italic; font-size: 1.05rem; line-height: 1.6;
+    color: var(--ivory); padding: 18px 20px; border: 1px solid var(--gold-dim); border-radius: var(--radius-sm);
+    min-height: 90px; margin-bottom: 20px; background: rgba(0,0,0,0.15);
+  }
+  .na-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .na-pill {
+    font-family: var(--font-nav); font-size: 0.78rem; font-weight: 500; color: var(--ivory2);
+    background: transparent; border: var(--border-thin); border-radius: 999px; padding: 9px 16px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .na-pill:hover { border-color: var(--aegean-light); color: var(--ivory); }
+  .na-pill.active { background: var(--aegean); border-color: var(--aegean); color: var(--ivory); }
+
+  .na-action-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+  .na-status { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+
+  .na-output-pane { border-top: var(--border-thin); padding-top: 24px; }
+  .na-output { font-family: var(--serif-body); font-size: 1.05rem; line-height: 1.7; color: var(--ivory); transition: opacity 0.25s ease; min-height: 60px; }
+
+  @media (max-width: 600px) {
+    .na-action-row { flex-direction: column; align-items: flex-start; }
+    .na-body { padding: 26px 20px 30px; }
+  }
 
   /* ── Proof / Dossier ──────────────────────────────────── */
   .proof { background: var(--paper); color: var(--void); padding: 100px 0; }
