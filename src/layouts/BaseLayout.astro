@@ -31,7 +31,6 @@ const canonical = `https://zordere.vercel.app${path}`;
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=zodiak@500,600,700&f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <Header />
@@ -40,15 +39,23 @@ const canonical = `https://zordere.vercel.app${path}`;
   </main>
   <Footer />
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    // @ts-ignore
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60,
-    });
+    // Fail-safe reveal: content is fully visible by default in CSS.
+    // Only once this script actually runs do we opt elements INTO the
+    // hidden-then-reveal animation. If this script fails for any reason,
+    // the page simply stays visible — it can never go blank again.
+    document.documentElement.classList.add('js-reveal-ready');
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
   </script>
 </body>
 </html>
