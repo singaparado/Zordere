@@ -20,19 +20,19 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="entry-grid">
+  <section class="entry-grid reveal">
     <div class="container grid">
-      <a href="/frameworks/" class="entry-card">
+      <a href="/frameworks/" class="entry-card lift-on-hover">
         <span class="eyebrow">The IP</span>
         <h3>Frameworks</h3>
         <p>The Complexity Tax, the Interpretation Window, RAFU, and the Three Laws of Translation — the proprietary vocabulary behind every diagnosis.</p>
       </a>
-      <a href="/legibility-score/" class="entry-card">
+      <a href="/legibility-score/" class="entry-card lift-on-hover">
         <span class="eyebrow">Free Diagnostic</span>
         <h3>Legibility Score</h3>
         <p>Paste your hero copy. Get a 0–100 score and see exactly where your narrative fractures.</p>
       </a>
-      <a href="/services/" class="entry-card">
+      <a href="/services/" class="entry-card lift-on-hover">
         <span class="eyebrow">Engagements</span>
         <h3>Services</h3>
         <p>From a single audit to an ongoing narrative retainer — structured for how sophisticated organizations actually buy.</p>
@@ -40,7 +40,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="claim">
+  <section class="claim reveal">
     <div class="container container-wide">
       <p class="eyebrow eyebrow-dark">The Premise</p>
       <h2>Buyers don't evaluate<br>the best product.<br>They evaluate the one<br>they understood first.</h2>
@@ -48,7 +48,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="proof">
+  <section class="proof reveal">
     <div class="container">
       <p class="eyebrow eyebrow-dark" style="margin-bottom:44px;">Proof Through Diagnosis</p>
       <div class="dossier-wrap">
@@ -81,20 +81,50 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="fw-index">
+  <section class="architecture reveal">
+    <div class="container container-wide">
+      <p class="eyebrow eyebrow-dark">The System</p>
+      <h2 class="arch-h">Four layers. One instrument.</h2>
+      <p class="arch-sub">Every diagnostic sits on top of a deeper architecture — most of it still being built beneath the surface.</p>
+      <div class="arch-grid">
+        <div class="arch-card arch-live">
+          <span class="arch-status">Live</span>
+          <h3>Signal</h3>
+          <p>What a client sees first. Every diagnostic already shipped — score, audit, fracture point, verdict.</p>
+        </div>
+        <div class="arch-card">
+          <span class="arch-status">In development</span>
+          <h3>Ledger</h3>
+          <p>Where a company's frameworks and claims stop living in decks and become a structured record.</p>
+        </div>
+        <div class="arch-card">
+          <span class="arch-status">In development</span>
+          <h3>Lattice</h3>
+          <p>The reasoning layer — tracing what depends on what, and what breaks if a single term changes.</p>
+        </div>
+        <div class="arch-card">
+          <span class="arch-status">In development</span>
+          <h3>Substrate</h3>
+          <p>The engineering floor underneath everything else — the graph store, retrieval, and models doing the tracing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-index reveal">
     <div class="container container-wide">
       <p class="eyebrow">The IP</p>
       <h2 class="fw-index-h">A proprietary vocabulary behind every diagnosis.</h2>
       <div class="fw-grid">
-        <div class="fw-card"><span class="fw-num">01</span><h3>The Complexity Tax</h3><p>What unclear positioning costs in slower procurement, discounted pricing, and lost category authority.</p></div>
-        <div class="fw-card"><span class="fw-num">02</span><h3>The Interpretation Window</h3><p>The five seconds a buyer has to self-locate before they move on. Most homepages fail inside it.</p></div>
-        <div class="fw-card"><span class="fw-num">03</span><h3>RAFU</h3><p>The diagnostic method for surfacing the unwritten assumptions a category runs on before they're named.</p></div>
+        <div class="fw-card lift-on-hover"><span class="fw-num">01</span><h3>The Complexity Tax</h3><p>What unclear positioning costs in slower procurement, discounted pricing, and lost category authority.</p></div>
+        <div class="fw-card lift-on-hover"><span class="fw-num">02</span><h3>The Interpretation Window</h3><p>The five seconds a buyer has to self-locate before they move on. Most homepages fail inside it.</p></div>
+        <div class="fw-card lift-on-hover"><span class="fw-num">03</span><h3>RAFU</h3><p>The diagnostic method for surfacing the unwritten assumptions a category runs on before they're named.</p></div>
       </div>
       <a href="/frameworks/" class="fw-more">See every framework →</a>
     </div>
   </section>
 
-  <section class="quote-break">
+  <section class="quote-break reveal">
     <div class="container">
       <div class="quote-mark">&ldquo;</div>
       <blockquote>Buyers don't reward the best product. They reward the product they understood first.</blockquote>
@@ -102,7 +132,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="method">
+  <section class="method reveal">
     <div class="container">
       <p class="eyebrow">The Sequence</p>
       <div class="method-grid">
@@ -114,7 +144,7 @@ import HeroSky from '../components/HeroSky.astro';
     </div>
   </section>
 
-  <section class="cta-strip">
+  <section class="cta-strip reveal">
     <div class="container">
       <h2>Find out what your market actually understood.</h2>
       <div class="hero-ctas" style="justify-content:center;">
@@ -142,20 +172,32 @@ import HeroSky from '../components/HeroSky.astro';
     .grid { grid-template-columns: 1fr; }
   }
 
-  /* ── Claim ────────────────────────────────────────────── */
+  /* ── Claim / Premise — now teal, not gold ────────────── */
   .claim {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    background: linear-gradient(135deg, var(--aegean) 0%, var(--aegean-light) 100%);
     color: var(--void);
     padding: 100px 0;
   }
   .container-wide { max-width: 1160px; }
-  .eyebrow-dark { color: var(--gold-dim) !important; }
+  .eyebrow-dark { color: rgba(22,36,31,0.68) !important; }
   .claim h2 {
     font-family: var(--display); font-weight: 600; font-style: italic;
     font-size: clamp(2.2rem, 6.4vw, 4.6rem); line-height: 1.04;
     letter-spacing: -0.01em; margin: 0 0 30px; max-width: 900px; color: var(--void);
   }
-  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(23,48,43,0.7); max-width: 460px; }
+  .claim-sub { font-family: var(--mono); font-size: 0.82rem; line-height: 1.7; color: rgba(22,36,31,0.72); max-width: 460px; }
+
+  /* ── Architecture — silver section, new ──────────────── */
+  .architecture { background: var(--silver-bg); color: var(--void); padding: 100px 0; }
+  .arch-h { font-family: var(--display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 0 0 16px; max-width: 640px; color: var(--void); }
+  .arch-sub { font-family: var(--serif-body); font-size: 1rem; line-height: 1.7; color: rgba(22,36,31,0.68); max-width: 520px; margin: 0 0 48px; }
+  .arch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(22,36,31,0.12); border: 1px solid rgba(22,36,31,0.12); }
+  .arch-card { background: var(--silver-bg2); padding: 30px 24px; }
+  .arch-card.arch-live { background: var(--paper); }
+  .arch-status { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(22,36,31,0.5); display: block; margin-bottom: 14px; }
+  .arch-live .arch-status { color: var(--aegean); font-weight: 600; }
+  .arch-card h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; margin: 0 0 10px; color: var(--void); }
+  .arch-card p { font-family: var(--serif-body); font-size: 0.82rem; line-height: 1.6; color: rgba(22,36,31,0.72); margin: 0; }
 
   /* ── Proof / Dossier ──────────────────────────────────── */
   .proof { background: var(--paper); color: var(--void); padding: 100px 0; }
@@ -222,12 +264,16 @@ import HeroSky from '../components/HeroSky.astro';
 
   @media (max-width: 760px) {
     .fw-grid { grid-template-columns: 1fr; }
+    .arch-grid { grid-template-columns: 1fr; }
     .method-grid { grid-template-columns: 1fr; gap: 40px; }
     .method-item { border-left: none; padding-left: 0; border-top: var(--border-thin); padding-top: 32px; }
     .method-item:first-child { border-top: none; padding-top: 0; }
     .dossier { padding: 28px 22px 26px; transform: rotate(0); }
     .law-bar-row { grid-template-columns: 88px 1fr 30px; }
     .score-num { font-size: 3.4rem; }
-    .claim, .proof, .fw-index, .quote-break, .method, .cta-strip { padding: 68px 0; }
+    .claim, .proof, .architecture, .fw-index, .quote-break, .method, .cta-strip { padding: 68px 0; }
+  }
+  @media (max-width: 900px) and (min-width: 761px) {
+    .arch-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
