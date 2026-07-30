@@ -74,12 +74,20 @@ const nav = [
   .mobile-menu {
     display: none;
     flex-direction: column;
-    padding: 12px 28px 40px;
+    padding: 0 28px;
     max-height: 0;
+    min-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease;
+    pointer-events: none;
+    transition: max-height 0.28s ease, opacity 0.2s ease, padding 0.28s ease;
   }
-  .menu-checkbox:checked ~ .mobile-menu { max-height: 500px; }
+  .menu-checkbox:checked ~ .mobile-menu {
+    max-height: 500px;
+    opacity: 1;
+    padding: 12px 28px 40px;
+    pointer-events: auto;
+  }
   .mobile-nav-link {
     font-family: var(--font-nav); font-size: 1.1rem; font-weight: 500;
     color: var(--ivory); text-decoration: none; padding: 18px 0;
