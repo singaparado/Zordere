@@ -1,0 +1,130 @@
+:root {
+  /* ── Base Surfaces — Charcoal-Teal foundation (LOCKED: v2 palette study, Version B) ── */
+  --navy:         #0F1B1C;
+  --cobalt:       #0F1B1C;
+  --deep:         #0A1414;
+  --void:         #16241F;
+  --ink:          #17302B;
+  --surface:      #14211F;
+
+  /* ── Bone / Cool Paper System ─────────────────────────── */
+  --ivory:        #F4F0E6;
+  --ivory2:       #CFC7B4;
+  --cream:        #E4DDC9;
+  --paper:        #F6F2E8;
+  --muted:        #8D8A7F;
+
+  /* ── SILVER — Primary accent (primary metallic voice) ── */
+  --gold:         #A9B0AC;
+  --gold-light:   #D1D7D3;
+  --gold-dim:     #6E7570;
+  --gold-glow:    rgba(169,176,172,0.14);
+
+  /* ── Bronze — Secondary accent (minor metallic voice only) ── */
+  --accent-bronze: #9C7A45;
+  --accent-bronze-light: #C2A06B;
+  --accent-bronze-dim: #6B5330;
+
+  /* ── Teal — NOW VISIBLE, not just structural ── */
+  --aegean:       #4A9184;
+  --aegean-light: #6FB3A6;
+  --sand:         #1A3733;
+
+  /* ── Utility — unchanged, semantic not brand ─────────── */
+  --rust:         #B8643E;
+
+  --display:      'Zodiak', serif;
+  --serif-title:  'Zodiak', serif;
+  --serif-body:   'Switzer', sans-serif;
+  --serif-alt:    'Zodiak', serif;
+  --mono:         'IBM Plex Mono', monospace;
+  --sans:         'Switzer', sans-serif;
+  --font-nav:     'Bricolage Grotesque', sans-serif;
+
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+
+  --border:       1px solid rgba(200,164,93,0.22);
+  --border-thin:  1px solid rgba(247,241,227,0.12);
+  --border-gold:  1px solid var(--gold);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--ivory);
+  font-family: var(--serif-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  margin: 0;
+  color: var(--ivory);
+}
+
+a { color: inherit; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 26px;
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ivory);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 26px;
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s;
+}
+.btn-secondary:hover { border-color: var(--gold); }
+
+section { padding: 96px 0; }
+
+@media (max-width: 720px) {
+  section { padding: 64px 0; }
+}
